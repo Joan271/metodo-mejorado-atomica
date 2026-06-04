@@ -46,3 +46,14 @@ Que se puede entender de la siguiente forma: podemos centrarnos en los $-$ que d
 Así, para cada partición de $M_{L}$ podremos tener una o varias posibilidades de $M_{S}$. Y esto es esperable puesto que un cierto un cierto $M_{L}$ puede tener varios $L$ asociados, lo cual son distintos términos L-S y por tanto, cada cual puede tener un $M_{S}$ distinto. El conteo de particiones de $M_{L}$ con sus correspondientes degeneraciones $G_{k}(M_{S}, \text{ partición})$ nos ha de dar como mínimo la degeneración de los términos L-S obtenidos en las particiones de $M_{L}$ superior y posiblemente, un excedente que se corresponden con términos L-S nuevos de $L$ menor.\par 
 Debe tenerse en cuenta que se pueden encontrar términos L-S nuevos repetidos. No es ningún error, es simplemente que hay varias configuraciones de los electrones que pueden dar el mismo término L-S. Estos términos los marcaremos como $K \times L^{S}$ donde $K$ es el número de veces que se ha encontrado ese término L-S. \par 
 Finalmente, el método se da por terminado cuando llegamos a $M_{L} = 0$. En ese caso, el número de términos L-S encontrados debe coincidir con el número de combinaciones \eqref{eq: numero de combinaciones final}, lo cual es una prueba de que el método se ha aplicado correctamente. \par
+
+El valor máximo de $L$, dado  $N$ y $l$ se puede 
+obtener teniendo en cuenta que un valor dado de 
+ $m_{l}$ puede como máximo repetirse dos veces. 
+ De este modo, 
+ \begin{align}
+   L_\text{max} =\underbrace{2l}_{1} + \underbrace{2(l-1)}_{2}+\ldots+\underbrace{2\left(l-\text{floor}(\frac{N}{2})-1 \right)}_{\text{floor}\left(\frac{N}{2}\right) }+\left[l-\text{floor}\left(\frac{N}{2}\right)-1-1\right]\times \text{mod}(N,2)\\
+   L_\text{max} = 2l\times \text{floor}\left(\frac{N}{2}\right)-\frac{\left(\text{floor}\left(\frac{N}{2}\right)+1\right)\left(\text{floor}\left(\frac{N}{2}\right)+2\right)}{2}+\left[l-\text{floor}\left(\frac{N}{2}\right)-2\right]\times \text{mod}(N,2)   
+ \end{align}
+
+
