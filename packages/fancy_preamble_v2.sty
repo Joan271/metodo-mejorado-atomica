@@ -1,0 +1,317 @@
+\ProvidesPackage{packages/fancy_preamble_v2}[05/03/2026 Preambulo fancy mezclado con note-setup-leftsidebox]
+\PassOptionsToPackage{dvipsnames}{xcolor}
+%% CODIFICACIÓN Y IDIOMA
+\RequirePackage[utf8]{inputenc}
+%\RequirePackage[spanish]{babel}
+\RequirePackage[T1]{fontenc} 
+%% MATEMÁTICAS y FISICA
+\RequirePackage{amsfonts, amssymb, mathtools, physics, mathrsfs, amsthm, empheq, siunitx, tensor, cancel, bm, extarrows}
+%% nccmath rompe con shortintertext de mathtools
+\RequirePackage[version=4]{mhchem}
+\ExplSyntaxOn
+% redirige el mensaje 'physics-pkg' del módulo 'siunitx' a 'none' (suprime)
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+\RequirePackage[b]{esvect} % vectores ajustados al contenido
+
+%% FIGURAS Y TABLAS
+\RequirePackage{graphicx, float, wrapfig, caption, subcaption, array, tabularx, multirow, longtable, xcolor}
+\RequirePackage[a4paper, margin=2cm]{geometry}
+
+%% DOCUMENTO Y FORMATO
+\RequirePackage{setspace, ragged2e, fancyhdr, parskip, multicol, sidecap, ifthen, xparse, hyperref, appendix, anyfontsize}
+\RequirePackage[shortlabels, inline]{enumitem} % shortlabels para usar [i), a), 1)] en vez de \Alph*, \alph*, \arabic* en los entornos de listas, inline para usar \begin{enumerate*}...\end{enumerate*} para listas en línea e.g. (a) texto (b) texto (c) texto
+
+%% ENTORNOS DE TEOREMAS
+\RequirePackage{thmtools} 
+\providecommand{\prooffname}{Proof}
+ \providecommand{\theoremname}{Theorem} 
+ \providecommand{\definitionname}{Definition}
+ \providecommand{\lemmaname}{Lemma}
+ \providecommand{\corollaryname}{Corollary}
+ \providecommand{\claimname}{Claim}
+ \providecommand{\propositionname}{Proposition}
+ \providecommand{\remarkname}{Remark} 
+ \providecommand{\examplename}{Example}
+ \providecommand{\problemname}{Problem}
+ \providecommand{\notename}{Note}
+
+  %ESPAÑOL
+\addto\captionsspanish{\def\prooffname{Demostración}} 
+\addto\captionsspanish{\def\problemname{Problema}} 
+\addto\captionsspanish{\def\theoremname{Teorema}} 
+\addto\captionsspanish{\def\definitionname{Definición}} 
+\addto\captionsspanish{\def\lemmaname{Lema}}
+\addto\captionsspanish{\def\corollaryname{Corolario}}
+\addto\captionsspanish{\def\claimname{Afirmación}}
+\addto\captionsspanish{\def\propositionname{Proposición}}
+\addto\captionsspanish{\def\remarkname{Observación}}
+\addto\captionsspanish{\def\examplename{Ejemplo}}
+\addto\captionsspanish{\def\notename{Nota}}
+  %ENGLISH
+\addto\captionsenglish{\def\prooffname{Proof}} 
+\addto\captionsenglish{\def\problemname{Problem}} 
+\addto\captionsenglish{\def\theoremnname{Theorem}}
+\addto\captionsenglish{\def\definitionname{Definition}}
+\addto\captionsenglish{\def\lemmaname{Lemma}}
+\addto\captionsenglish{\def\corollaryname{Corollary}}
+\addto\captionsenglish{\def\claimname{Claim}}
+\addto\captionsenglish{\def\propositionname{Proposition}}
+\addto\captionsenglish{\def\remarkname{Remark}}
+\addto\captionsenglish{\def\examplename{Example}}
+\addto\captionsenglish{\def\notename{Note}}
+
+\renewcommand*{\proofname}{\normalfont\bfseries \prooffname}
+%% define environments
+\declaretheorem[style=definition, name=\protect\theoremname, numbered=yes, numberwithin=section]{theorem}
+\declaretheorem[style=definition, name=\protect\theoremname, numbered=no]{theorem*}
+
+\declaretheorem[style=plain, name=\protect\propositionname, numbered=yes, sibling=theorem]{proposition}
+\declaretheorem[style=plain, name=\protect\propositionname, numbered=no]{proposition*}
+
+\declaretheorem[style=definition, name=\protect\corollaryname, numbered=yes, sibling=theorem]{corollary}
+\declaretheorem[style=definition, name=\protect\corollaryname, numbered=no]{corollary*}
+
+\declaretheorem[style=definition, name=\protect\lemmaname, numbered=yes, sibling=theorem]{lemma}
+\declaretheorem[style=plain, name=\protect\lemmaname, numbered=no]{lemma*}
+
+\declaretheorem[style=definition, name=\protect\claimname, numbered=yes, sibling=theorem]{claim}
+\declaretheorem[style=plain, name=\protect\claimname, numbered=no]{claim*}
+
+\declaretheorem[style=definition, name=\protect\definitionname, numbered=yes, numberwithin=section]{definition}
+\declaretheorem[style=definition, name=\protect\definitionname, numbered=no]{definition*}
+
+\declaretheorem[style=definition, name=\protect\examplename, numbered=yes, numberwithin=section]{example}
+\declaretheorem[style=definition, name=\protect\examplename, numbered=no]{example*}
+
+
+\declaretheorem[style=remark, name=Remark, numbered=yes, numberwithin=section]{remark}
+\declaretheorem[style=remark, name=Remark, numbered=no]{remark*}
+
+\declaretheoremstyle[headfont=\color{blue!80}\bfseries, bodyfont=\normalfont, spaceabove=3pt, spacebelow=3pt]{notestyle}
+
+\declaretheorem[style=notestyle, name=Note, numbered=yes, numberwithin=section]{note}
+\declaretheorem[style=notestyle, name=Note, numbered=no]{note*}
+
+\declaretheoremstyle[headfont=\bfseries, bodyfont=\normalfont, spaceabove=3pt, spacebelow=3pt, qed=\ensuremath{\square}]{solutionstyle}
+
+\declaretheoremstyle[
+ headfont=\normalfont\bfseries, 
+ bodyfont=\normalfont, 
+ notefont=\normalfont\bfseries, 
+ notebraces={}{}, 
+ headpunct = { }, 
+ postheadspace = \newline, 
+ spaceabove=3pt, 
+ spacebelow=3pt]{problemstyle} 
+
+
+\declaretheorem[style=problemstyle, name=\protect\problemname, numbered=yes, numberwithin=section]{problem}
+\declaretheorem[style=problemstyle, name=\protect\problemname, numbered=no]{problem*}
+
+\declaretheorem[style=solutionstyle, name=Solution, numbered=yes, numberwithin=section]{solution}
+\declaretheorem[style=solutionstyle, name=Solution, numbered=no]{solution*}
+
+
+ 
+
+
+\usepackage[most]{tcolorbox}
+
+\newcommand{\newtcbenvironment}[2]{
+    \tcolorboxenvironment{#1}{#2, enhanced, breakable, sharp corners,leftrule=2pt, rightrule=0pt, toprule=0pt, bottomrule=0pt}
+    \tcolorboxenvironment{#1*}{#2, enhanced, breakable, rounded corners,leftrule=2pt, rightrule=0pt, toprule=0pt, bottomrule=0pt}
+}
+
+%% define styles
+
+\newtcbenvironment{theorem}{colframe=RoyalPurple, colback=RoyalPurple!8}
+\newtcbenvironment{proposition}{colframe=RoyalPurple, colback=RoyalPurple!8}
+\newtcbenvironment{corollary}{colframe=NavyBlue, colback=SkyBlue!8}
+\newtcbenvironment{lemma}{colframe=NavyBlue, colback=SkyBlue!8}
+\newtcbenvironment{claim}{colframe=NavyBlue, colback=SkyBlue!8}
+
+\newtcbenvironment{definition}{colframe=ForestGreen, colback=ForestGreen!5}
+\newtcbenvironment{example}{colframe=RawSienna, colback=RawSienna!5}
+\newtcbenvironment{problem}{colframe=WildStrawberry!30, colback=ForestGreen!2}
+
+%% cbox
+\newtcolorbox{cbox}[1][]{%
+    enhanced,
+    breakable,
+    sharp corners,
+    leftrule=2pt, rightrule=0pt, toprule=0pt, bottomrule=0pt,
+    colframe=SkyBlue,
+    colback=SkyBlue!8,
+    #1
+}
+
+%% CAPTIONS
+\DeclareCaptionFormat{format1}{\textbf{#1#2}#3}
+\DeclareCaptionFormat{format2}{\textsc{#1#2}#3}
+\DeclareCaptionLabelSeparator{parentesis}{$)\,$}
+
+\DeclareCaptionStyle{subfigura}{format=format1, justification=raggedright, labelsep=parentesis, font={color=black, huge}}
+\DeclareCaptionStyle{subfigura2}{format=format1, justification=raggedright, labelsep=parentesis, font={color=black, Large}}
+
+
+%% ===========================
+%% COMANDOS DE TÍTULO
+%% ===========================
+\NewDocumentCommand{\settitle}{O{0} O{0} m}{ % [autor][asignatura]{título}
+    \ifthenelse{\equal{#1}{0}}{}{\author{#1}}
+    \ifthenelse{\equal{#2}{0}}
+        {\date{\vspace*{1em}\hrule\vspace*{1em}}}
+        {\date{\Large{UAM - #2}\vspace*{1em}\hrule\vspace*{1em}}}
+    \title{\Huge \textbf{#3}}
+}
+
+%% ===========================
+%% FORMATO DE PÁGINA
+%% ===========================
+\newcommand{\rightheader}{} 
+\newcommand{\setrightheader}[1]{%
+  \renewcommand{\rightheader}{#1}
+}
+\NewDocumentCommand{\setformat}{O{0.8\textwidth} O{centering} m}{
+    % [ancho de figuras][alineación]{cabecera derecha}
+  \renewcommand{\rightheader}{#3}
+    % Estilo claro
+    \fancypagestyle{claroi}{
+        \fancyhf{}
+        \fancyhead[L]{\color{black}\textsc{UAM}}
+        \fancyhead[R]{\color{black}\textsc{\rightheader}}
+        \fancyfoot[C]{\color{black}\thepage}
+        \setlength{\headheight}{18pt}
+        \renewcommand{\headrulewidth}{0.75pt}
+        \renewcommand{\headruleskip}{-0.5em}
+        \renewcommand{\headrule}{\hbox to\headwidth{\color{black}\leaders\hrule height \headrulewidth\hfill}}
+        \renewcommand{\footrulewidth}{0pt}
+    }
+
+    % Estilo oscuro
+    \fancypagestyle{oscuroi}{
+        \fancyhf{}
+        \fancyhead[L]{\color{white}\textsc{UAM}}
+        \fancyhead[R]{\color{white}\textsc{\rightheader}}
+        \fancyfoot[C]{\color{white}\thepage}
+        \renewcommand{\headrulewidth}{0.75pt}
+        \renewcommand{\headruleskip}{-0.5em}
+        \renewcommand{\headrule}{\hbox to\headwidth{\color{white}\leaders\hrule height \headrulewidth\hfill}}
+        \renewcommand{\footrulewidth}{0pt}
+    }
+
+    % Estilos de captions personalizados
+    \DeclareCaptionStyle{figura_claro_custom}{
+        format=format1,
+        justification=#2,
+        font={color=black, small},
+        name=Fig.,
+        width=#1
+    }
+
+    \DeclareCaptionStyle{figura_oscuro_custom}{
+        format=format1,
+        justification=#2,
+        font={color=white, small},
+        name=Fig.,
+        width=#1
+    }
+
+    \DeclareCaptionStyle{tabla_claro_custom}{
+        format=format1,
+        justification=#2,
+        font={color=black, small},
+        name=Tabla,
+        width=#1
+    }
+
+    \DeclareCaptionStyle{tabla_oscuro_custom}{
+        format=format1,
+        justification=#2,
+        font={color=white, small},
+        name=Tabla,
+        width=#1
+    }
+
+    % hipersetup general
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue, citecolor=blue, filecolor=magenta, urlcolor=blue,
+        pdfpagemode=FullScreen,
+        linktocpage=false
+    }
+    \urlstyle{same}
+}
+%% ===========================
+%% MODOS CLARO Y OSCURO
+%% ===========================
+\def\darkmode{
+    \pagecolor{black}
+    \color{white}
+    \pagestyle{oscuroi}
+    \captionsetup*[figure]{style=figura_oscuro_custom}
+    \captionsetup*[table]{style=tabla_oscuro_custom}
+    \hypersetup{
+        linkcolor=cyan, 
+        citecolor=cyan, 
+        filecolor=magenta,
+        urlcolor=cyan,
+    }
+}
+
+\def\brightmode{
+    \pagecolor{white}
+    \color{black}
+    \pagestyle{claroi}
+    \captionsetup*[figure]{style=figura_claro_custom}
+    \captionsetup*[table]{style=tabla_claro_custom}
+    \hypersetup{
+        linkcolor=blue, 
+        citecolor=blue, 
+        filecolor=magenta, 
+        urlcolor=blue,
+    }
+}
+
+%% COMANDOS MATEMÁTICOS
+\DeclareMathOperator{\rot}{\textrm{\textbf{rot}}}
+\DeclareMathOperator{\diver}{\textrm{\textbf{div}}}
+\DeclareMathOperator{\sign}{\textrm{sign}}
+\renewcommand{\grad}{\textrm{\textbf{grad}}} 
+\newcommand{\appeq}{\backsimeq}
+\newcommand{\FT}[1]{\mathcal{F}\qty{#1}}
+\newcommand{\LT}[1]{\mathcal{L}\qty{#1}}
+\newcommand{\BLT}[1]{\mathcal{B}\qty{#1}}
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+\newcommand{\Oterm}[2]{\mathcal{O}\qty(#1)^#2}
+\newcommand{\tf}{\;\therefore\;}
+\newcommand{\bc}{\;\because\;}
+\renewcommand{\Tr}[1]{\mathrm{Tr}\qty(#1)}
+\newcommand{\up}{\uparrow}
+\newcommand{\down}{\downarrow}
+\newcommand{\eqdef}{\overset{\text{def}}{=}}
+\newcommand{\qeq}{\overset{\text{?}}{=}}
+\newcommand{\cte}{\mathrm{cte}}
+\newcommand{\diag}[1]{\mathrm{diag}\qty(#1)}
+%% ===========================
+%% COMANDO RESOLUCIÓN
+%% ===========================
+\newcommand{\Resolucion}{
+    \vspace*{1em}
+    \hrule
+    \vspace*{1em}
+    {\color{blue} Resolución:}\\
+}
+
+%% ===========================
+%% Figuras y ecuaciones comentadas
+%% ===========================
+%% ===========================
+%% REINICIO DE NUMERACIÓN DE PÁGINA
+%% ===========================
+\def\resetnumpagetitle{
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+}
