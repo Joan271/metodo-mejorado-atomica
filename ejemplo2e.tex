@@ -1,0 +1,98 @@
+
+Consideramos el caso de 2 $e^-$ con  $l=1$. Las posibles 
+configuraciones electrónicas serán aquellas que 
+obedezcan el Principio de Exclusión de Pauli. Para 
+encontrarlas, vamos a considerar las posibles 
+configuraciones de espín  en función del 
+número de duplas $(m_{l}^{(1)},m_{l}^{(2)})$ con $m_{l}^{(1)}=m_{l}^{(2)}$.
+En este caso, al tener sólo 2 $e^-$, el número máximo 
+de duplas iguales (que simplemente llamaremos duplas 
+de aquí en adelante) es 1, pero en general podrá ser, 
+dependiendo del valor de  $l$. \textit{\textbf{(Se puede buscar 
+cuál es el nro. máximo de duplas que se pueden 
+formar en función de $l$ y  $N$)}}.\par 
+Una vez determinamos el número máximo de duplas 
+permitido $\mathcal{D}_{M}$, es fácil ver que van a 
+existir configurarciones permitidas con valor de
+duplas $\mathcal{D}\in [0,\mathcal{D}_{M}]$. A cada valor de dupla $\mathcal{D}$ 
+le es asociado un conjunto de posibles configuraciones de 
+espín.\par 
+Para el caso partícular de $2$  $e^-$ con  $l=1$, 
+tenemos  $\mathcal{D}_{M}=1$ y las "reglas" o 
+posibles configuraciones de espín para 
+cada $\mathcal{D}$ son\par 
+\underline{\textbf{Reglas}}
+\begin{align*}
+  \mathcal{D}=1&:\ \begin{cases}
+    1\times M_{s}=0\ (+,-)
+  \end{cases}\\
+    \mathcal{D}=0&: \begin{cases}
+      1\times M_{s}=1\ (+,+)\\
+      2\times M_{s}=0\ (+,-)
+    \end{cases}
+\end{align*}
+Es quizás importante remarcar, en el caso de $\mathcal{D}=1$, 
+que las configuraciones $(+,-)$ y $(-,+)$ son equivalentes 
+y sólo se cuenta una de ellas. Esto es porque en este
+caso  $m_{l}^{(1)}=m_{l}^{(2)}$, y como el resto de 
+números cuánticos también son iguales, siendo los 
+$e^-$ partículas indistinguibles, el estado realmente 
+de esta configuración es 
+ \begin{align}
+  \ket{\psi} = \frac{1}{\sqrt{2}}\left(\ket{n,n;l,l;m_{l},m_{l};+,-}-\ket{n,n;l,l;m_{l},m_{l};-,+} \right) 
+\end{align}
+donde estamos empleando la siguiente notación para 
+especificar una configuración 
+\begin{align*}
+  \ket{\psi} = \ket{n_{1},n_{2};l_{1},l_{2};m_{l}^{(1)},m_{l}^{(2)};m_{s}^{(1)},m_{s}^{(2)}}
+\end{align*}
+Mientras que en el caso $\mathcal{D}=0$, al tener $m_{l}$ distintos, 
+los dos electrones son distinguibles, y por lo tanto 
+cuando $M_{S}=0$ tenemos dos posibles estados diferentes 
+\begin{align*}
+  \ket{\psi_{1}} &= \ket{n,n;l,l;m_{l},m_{l}';+,-}\\
+  \ket{\psi_{2}} &= \ket{n,n;l,l;m_{l},m_{l}';-,+}\\
+  \ket{\psi_{1}}&\ne \ket{\psi_{2}}
+\end{align*}
+Habiendo establecido las reglas, procedos a 
+calcular las posibles configuraciones en términos 
+del valor de $M_{L}$ 
+
+\begin{align*}
+  &M_{L}=2:\ &2=1+1 \to \mathcal{D}=1 \to \begin{cases}
+    M_{S}=0 \to 1\times ^1D(5)
+  \end{cases}\\
+  &M_{L}=1:\ &1=1+0 \to \mathcal{D=0} \to \begin{cases}
+    1\times M_{S}=1 \to 1\times ^3P\\
+    2\times M_{S}=0 \to \{1\times ^1D,\ 1\times ^3P\}
+  \end{cases}\\
+  &M_{L}=0:\ &0=1-1 \to  \mathcal{D}=0 \to  \begin{cases}
+    1\times M_{S}=1 \to 1\times ^3P\\
+    2\times M_{S}=0\to \{1\times ^1D,\ 1\times ^3P\}
+  \end{cases}\\
+  &  &0=0+0 \to  \mathcal{D}=1 \to \begin{cases}
+    1\times M_{S}=0 \to 1\times ^1S
+  \end{cases}
+\end{align*}
+Una de las ventajas de este método es que, a la hora 
+de determinar las posibles combinaciones de $m_{l}$ que 
+suman $M_{L}$ basta con partir del $M_{L}^{(\text{max})}$ máximo que 
+se obtiene trivalmente de maximizar todos los $m_{l}$ 
+(respetando el principio de Pauli), y luego para 
+$M_{L}^{(\text{max})}-1$ las combinaciones posibles se obtienen 
+de restar $1$ a los diferentes $m_{l}$ que aparecen 
+en la configuración de $M_{L}^{(\text{max})}$.\par 
+Por otro lado, al disminuir $M_{L}$ y contar los 
+estados, tenemos que considerar que para una 
+configuración con $L$ y  $S$ dados, también van a 
+existir instancias con  $M_{L}$ y $M_{S}$ menores, 
+por lo que en cada $M_{L}$ debemos de asegurarnos 
+de no perder estos estados y contarlos como 
+configuraciones nuevas o distintas.\par 
+Para $M_{L}<0$ las configuraciones serán 
+idénticas, simplemente cambiando el signo de las $m_{l}$. 
+Entonces, los términos espectrales que obtenemos en 
+este caso son 
+\begin{align*}
+  \text{T.E.:}\ ^1D(5),\ ^3P(9),\ ^1S(1);\ d = 5+9+1=15
+\end{align*}
