@@ -1,4 +1,4 @@
-Consideramos por último, el caso de 4 $e^-$ equivalentes con $l=2$. La correspondiente configuración electrónica es $d^{4}$. En este caso $\mathcal{D}\in [0,2]$ y las reglas son 
+Consideramos por último, el caso de 4 $e^-$ equivalentes con $l=2$. La correspondiente configuración electrónica es $d^{4}$. En este caso $\mathcal{D}\in [0,2]$ y las reglas son \\
 \underline{\textbf{Reglas}}:
 \begin{align}
   &\mathcal{D}=2 \longrightarrow 1\times (M_{S}=0):\ (+-+-)\\
@@ -70,13 +70,13 @@ Entonces los términos espectrales son
        \mathcal{D} &= 2\\ 
        \mathcal{D} &= 0\\
        \mathcal{D} &= 1\\
-       \mathcal{D} &= 2\\
+       \mathcal{D} &= 1\\
        \mathcal{D} &= 2
      \end{aligned} & \begin{dcases}
       1 \times (M_{S} = 2) \\
-      5\times(M_{S}=1)\\ 
-      11\times (M_{S} = 0) 
-   \end{dcases}  \implies \ce{^{5}D(25)},\  2\times \ce{^{1}D(5)} \\ 
+      6\times(M_{S}=1)\\ 
+      12\times (M_{S} = 0) 
+   \end{dcases}  \implies \ce{^{5}D(25)}, \ce{^{3}D}(15),\;  2\times \ce{^{1}D(5)} \\ 
      \hline
      M_{L} = 1 & 
      \begin{aligned}
@@ -97,7 +97,7 @@ Entonces los términos espectrales son
     1\times (M_{S}=2)\\  
     8 \times (M_{S} = 1)\\
     14 \times (M_{S} = 0) 
-    \end{cases} \implies  3\times\ce{^{3}P}(9),\ \\
+    \end{cases} \implies  2\times\ce{^{3}P}(9),\ \\
  \hline 
    M_{L} = 0 & 
      \begin{aligned}
@@ -124,7 +124,31 @@ Entonces los términos espectrales son
    \end{dcases}  \implies 2\times\ce{^{1}S(1)} \\ 
       \end{array}
 \end{align*}
-
 \begin{align*}
- g_{T} = 204 \ne 210 
+ g_{T} = 13 + 33 + 29 + 2 \times 9 + 2 \times 21 + 7 + 25 + 15 + 5 + 2 \times 9 + 2 = 210 = \binom{10}{4}
 \end{align*}
+Por tanto, los términos L-S son: 
+\begin{align*}
+  \boxed{\text{ T.E.: } \begin{aligned}[t]
+    &\ce{^{1}I}(13),\;  \ce{^{3}H}(33),\;  \ce{^{3}G}(27),\;  2\times\ce{^{1}G}(9),\;  2\times\ce{^{3}F}(21),\;  \ce{^{1}F}(7),\;  \ce{^{5}D}(25),\;  \ce{^{3}D}(15),\\ 
+    &\quad 2\times\ce{^{1}D}(5),\;  2\times\ce{^{3}P}(9),\;  2\times\ce{^{1}S}(1)
+  \end{aligned}}
+\end{align*}
+\textbf{Nota:} Operativamente, es conveniente asignar un vector a cada regla de la siguiente forma: 
+\begin{align*}
+  \mathcal{D} \to  (\mathrm{mult.}( M_{S} = 2),\; \mathrm{mult.} (M_{S} = 1),\; \mathrm{mult.} (M_{S} = 0)) \implies 
+  \begin{dcases}
+    \mathcal{D} = 2 \to  (0,0,1)\\ 
+    \mathcal{D} = 1 \to  (0,1,2)\\ 
+    \mathcal{D} = 0 \to  (1,4,6)
+  \end{dcases}
+\end{align*}
+De esta forma, para un cierto $M_{L}$ se le asigna un vector con el que podemos operar para obtener los términos espectrales. Por ejemplo, para $M_{L} = 2$ tendremos el vector asociado:
+\begin{align*}
+2 \times (0,0,1) + 2 \times (0,1,2) + 1 \times (1,4,6) = (1,6,12)
+\end{align*}
+donde los coeficientes de los vectores vienen dados por el número de veces que una regla se cumple. Así, podemos restar a este vector el asociado al anterior $M_{L}$, es decir, $M_{L} = 3$ y obtenemos: 
+\begin{align*}
+(1,6,12) - (0,4,8) = (1,2,4)
+\end{align*}
+Y este vector es lo que necesitamos para obtener los términos espectrales emergentes. Con la primera componente podemos asegurar que emerge un término con $S = 2$. De la segunda componente (2), al restar su anterior componente (1), nos da un término emergente con $S = 1$. Y con la tercera componente (4), al restar su anterior componente (2) nos da 2 términos emergentes con $S = 0$. Este mecanismo de resta incorpora las consideraciones de que términos con $S$ superior también han de tenerse en cuenta en la contabilidad de $M_{S}$ inferiores.   
