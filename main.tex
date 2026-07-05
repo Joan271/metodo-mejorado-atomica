@@ -1,13 +1,8 @@
 \documentclass[12pt]{article}
-\usepackage[select language]{babel} 
+\usepackage[spanish]{babel} 
 \usepackage{packages/mygeneral}
 \usepackage{packages/mycommands}
-\usepackage{packages/tfg_layout} 
-%\usepackage{packages/mytheorems_env}
-%\usepackage{packages/dangbox} 
-%\usepackage{packages/epibox} 
-%\usepackage[backend=biber, style=numeric, sorting=none]{biblatex} 
-%\addbibresource{bibliography.bib} 
+\usepackage{packages/mylayout} 
 \institution{
   name=UAM
 } 
@@ -15,16 +10,17 @@
  rightheader=Física Atómica y Molecular,
  logo=false % set false/true to hide/show the lowo in the left header
 } 
-
+\titlesetup{
+  theme=project,
+  title=Método optimizado de obtención de términos L-S y j-j para electrones degenerados,
+  author={Joan A. Mercado Tandazo $\quad$ Juan Manuel Sánchez Arrúa},
+  projectname=Física Atómica y Molecular
+} 
 \mathtoolsset{showonlyrefs=true} % for showing number only in labeled equations
 \allowdisplaybreaks[2] %in case you want your equations to be broken across pages
 \let\vec\mathbf % display vectors in bold instead of with an arrow
-\title{Método mejorado de obtención de términos L-S y j-j para electrones degenerados}
-\author{Joan A. Mercado Tandazo \and Juan Manuel Sánchez Arrúa} 
 \begin{document}
 \maketitle
-\hrule{\textwidth}
-\resetnumpagetitle
 \tableofcontents
 \resetnumpagetitle
 \pagestyle{academic} 
@@ -37,7 +33,7 @@
 \input{ejemplo3e.tex} 
 \subsection{Ejemplo: 4 \texorpdfstring{$e^{-}$}{e^-}}
 \input{ejemplo4e.tex} 
-\section{Términos j-j} 
+\section{Términos j-j}\label{sec: terminos j-j} 
 \input{Terminos j-j.tex} 
 \subsection{Ejemplo: 3 \texorpdfstring{$e^{-}$}{e^-}}
 \input{j-j-3e.tex}

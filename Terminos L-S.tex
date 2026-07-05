@@ -1,7 +1,7 @@
 % !TEX root = main.tex
-\section{Términos L-S} 
-Supongamos que tenemos $N$ electrones en un mismo subnivel $l$, y queremos obtener los términos L-S correspondientes. Es decir, partimos de una configuración electrónica de la forma $l^{N}$ donde asumimos que $N \leq 1/2(2l + 1)\times (2s+1)$, pues por la simetría ``electrón-hueco'' el caso de $N > 1/2(2l + 1)\times (2s+1)$ se puede obtener a partir del caso de $N' = (2l + 1)\times (2s+1) - N$ electrones. Por teoría del momento angular, sabemos que el número cuántico total de momento orbital $L$ puede tomar valores entre $L= N \times l$ y $ L =0$ o $L=l$ según $N$ sea par o impar. Esto nos da una idea de qué valores de $L$ podemos esperar en los términos L-S. \par
-Una parte fundamental del método es estudiar el spin. Este tomará valores entre $S = N \times s$ y $S = 0$ o $S = 1/2$ según $N$ sea par o impar. Como las posibilidades de la tercera componente del spin individual son menores a las del momento orbital (individual) entonces le asignamos a este un rol secundario. De esta forma tenemos el siguiente panorama: para cada combinación $(M_{L},M_{S})$ tenemos un conjunto de posibilidades de los $e^{-}$ individualmente $(m_{1}^{\sigma_{1}}, m_{2}^{\sigma_{2}},\dots m_{N}^{\sigma_{N}})$ donde $m_{i}$ es la tercera componente del momento orbital del electrón $i$ y $\sigma_{i}$ es su tercera componente del spin.  Además, por teoría del momento angular deben cumplir: 
+\section{Términos L-S}\label{sec: terminos L-S}
+Supongamos que tenemos $N$ electrones en un mismo subnivel $l$, y queremos obtener los términos L-S correspondientes. Es decir, partimos de una configuración electrónica de la forma $l^{N}$ donde asumimos que $N \leq (1/2)(2l + 1)\times (2s+1)$, pues por la simetría ``electrón-hueco'' el caso de $N > (1/2)(2l + 1)\times (2s+1)$ se puede obtener a partir del caso de $N' = (2l + 1)\times (2s+1) - N$ electrones. Por teoría del momento angular, sabemos que el número cuántico total de momento orbital $L$ puede tomar valores entre $L= N \times l$ y $ L =0$ ó $L=l$ según $N$ sea par o impar respectivamente. Esto nos da un primer acercamiento de los valores de $L$ que podemos esperar en los términos L-S. \par
+Una parte fundamental del método es estudiar el spin. Análogamente al momento angular, el spin total tomará valores entre $S = N/2$ y $S = 0$ ó $S = 1/2$ según $N$ sea par o impar. Como las posibilidades de la tercera componente del spin individual son menores a las del momento orbital (individual) entonces le asignamos a este un rol secundario. De esta forma tenemos el siguiente panorama: para cada combinación $(M_{L},M_{S})$ tenemos un conjunto de posibles <<tuplas>>\footnote{Nótese que en general no hablamos de una correspondencia entre estados $\ket{M_{L},M_{S}}$ con estados $\ket{m_{1}, \sigma_{1};m_{2},\sigma_{2};\dots ; m_{N}, \sigma_{N}}$, pues en general $\ket{M_{L}, M_{S}}$ será una combinación lineal de estos últimos.}  de los $e^{-}$ individualmente $(m_{1}^{\sigma_{1}}, m_{2}^{\sigma_{2}},\dots m_{N}^{\sigma_{N}})$ donde $m_{i}$ es la tercera componente del momento orbital del electrón $i$ y $\sigma_{i}$ es su tercera componente del spin.  Además, por teoría del momento angular deben cumplir: 
 \begin{align}
   \sum_{i=1}^{N} &m_{i} = M_{L} & \sum_{i=1}^{N} &\sigma_{i} = M_{S} \label{eq: suma de 3as componentes} 
 \end{align}
@@ -17,43 +17,45 @@ A continuación centrémonos en $M_{L}$ y busquemos el número más alto posible
   \begin{minipage}[t]{0.9\textwidth}
   Denominando a la expresión $M_{L} = m_{1} + m_{2} + \dots + m_{N}$ como una \textbf{partición} de $M_{L}$, entonces, en ella no podemos repetir el mismo $m$ 2 veces.
   \end{minipage}
-}\par
-\end{center} 
-La partición que obtenida para el máximo valor de $M_{L}$ se corresponderá con el máximo valor de $L$. \par 
+}
+\end{center}
+\vspace*{0.2cm} 
+La partición obtenida para el máximo valor de $M_{L}$ se corresponderá con el máximo valor de $L$. \par 
 Así, nos queda averiguar el spin. Para ello, deberes sumar las $\sigma$'s de las cuales, por supuesto, no hemos llevado su contabilidad, porque no es necesario. Para la partición de $M_{L}$ más alto, es sencillo averiguar $M_{S}$ porque tendremos muchas repeticiones de $m$'s lo cual significa que las terceras componentes de spin se anulan entre sí y solo tendremos que fijarnos en la $m$ no repetida para averiguar $M_{S}$. Es decir, renombrando los valores que toma $\sigma$ como $+1/2 \to  +$ $-1/2 \to  -$ tendremos una forma tal que: 
 \begin{align*}
   M_{L} &= \underbrace{a^{+} + a^{-} + b^{+} + b^{-} + \dots (+ m^{+})}_\text{$N$ sumandos}\; , \quad \text{ donde } a=\max(m_{i})>b>\dots > m 
 \end{align*}
 Nótese que asignamos los $+$ antes que los $-$, lo cual es una convención, pero no nos hace falta considerar el signo opuesto porque el resultado será simétrico y será irrelevante para obtener $S$. \par
 Para $N$ par, no existirá esa $m$ no repetida. Entonces $M_{S} = 0$, lo cual inducirá a que $S=0$ para ese término de máxima $L$. Y para el caso de $N$ impar, existirá ese término de $m$ no repetida y entonces $M_{S} = 1/2$, lo cual inducirá a que $S=1/2$ para ese término de máxima $L$. De ahí podremos extraer el término L-S correspondiente con su degeneración, que será importante para la contabilidad de los siguientes términos. \par
+Aunque en general se puede deducir para cada ejemplo, como nota de interés, el lector puede comprobar que en general el valor máximo de $L$, dado  $N$ y $l$ se puede obtener teniendo en cuenta que un valor dado de $m_{l}$ puede como máximo repetirse dos veces. De este modo: 
+\begin{align}
+   L_\text{max} =\underbrace{2l}_{1} + \underbrace{2(l-1)}_{2}+\ldots+\underbrace{2\left(l-\text{floor}(\frac{N}{2})-1 \right)}_{\text{floor}\left(\frac{N}{2}\right) }+\left[l-\text{floor}\left(\frac{N}{2}\right)-1-1\right]\times \text{mod}(N,2)\\
+   L_\text{max} = 2l\times \text{floor}\left(\frac{N}{2}\right)-2\frac{\left(\text{floor}\left(\frac{N}{2}\right)+1\right)\left(\text{floor}\left(\frac{N}{2}\right)+2\right)}{2}+\left[l-\text{floor}\left(\frac{N}{2}\right)-2\right]\times \text{mod}(N,2)   
+ \end{align}
 
 Para obtener los siguientes términos, formalmente lo siguiente es aplicar el operador $L_{-}$ para reducir en 1 el valor de $M_{L}$. Si bien recordamos, dicho operador viene dado por: 
 \begin{align*}
 L_{-} = \sum_{i=1}^{N} l_{-}^{(i)}
 \end{align*}
-Y si aplicamos $L_{-}$ a un estado con $M_{L}$ dado, entonces el resultado será un estado con $M_{L} - 1$. Pero además: 
+Y si aplicamos $L_{-}$ a un estado $\ket{m_{1},\sigma_{1}; m_{2},\sigma_{2}; \dots m_{N},\sigma_{N}}$ con $M_{L} = \sum_{i=1}^{N} m_{i}$ definido (aunque no tenga un $L$ definido), entonces el resultado será un estado con $M_{L} - 1$. Pero además: 
 \begin{align*}
-L_{-} \ket{M_{L},M_{S}} = \sum_{i=0}^{N} l_{-}^{(i)} \ket{m_{1},\sigma_{1}; m_{2},\sigma_{2}; \dots m_{N},\sigma_{N}} = \sum_{i=0}^{N} a_{i} \ket{\dots m_{i} - 1, \sigma_{i} \dots}
+L_{-} \ket{m_{1},\sigma_{1}; m_{2},\sigma_{2}; \dots m_{N},\sigma_{N}} = \sum_{i=0}^{N} l_{-}^{(i)} \ket{m_{1},\sigma_{1}; m_{2},\sigma_{2}; \dots m_{N},\sigma_{N}} = \sum_{i=0}^{N} a_{i} \ket{\dots m_{i} - 1, \sigma_{i} \dots}
 \end{align*}
 Donde $a_{i}$ por construcción será tal que cumpla el principio de exclusión de Pauli, es decir, $a_{i} = 0$ si $m_{i} - 1$ ya está repetido. \par 
-En el lenguaje simple de particiones esto se traduce en que a cada sumando de la partición anterior podemos reducirlo en una cifra para obtener una partición de $M_{L}-1$, siempre y cuando esa reducción no implique repetir más de 2 veces un sumando. Esto dará lugar a varias particiones y como el método es reiterativo, es posible, y de hecho favorable a la hora de reducir el esfuerzo, que a la hora de seguir aplicando $L_{-}$ se obtenga una partición de $M_{L}-1$ que ya hemos anotado. En ese caso, no la volvemos a repetir, simplemente la ignoramos. Así podremos generar todas las particiones de $M_{L}-1$ a partir de las particiones de $M_{L}$, y sistemáticamente llegar a $M_{L} = 0$. \par 
-Para cada uno de los $M_{L}$ tendremos que buscar los posibles $M_{S}$ correspondientes. En ese caso tendremos que generalizar lo que vimos para el caso de $M_{L}$ máximo. En estas particiones tendremos sumandos que se repiten y otros que no. De nuevo, para obtener $M_{S}$ solo nos interesa los términos no repetidos, puesto que los repetidos se anulan entre sí. Asumamos que existen $k$ sumandos no repetidos y sabemos que el número de $M_{S}>0$ distintos será $\mathrm{floor}\qty(k/2) + 1$ porque cada sumando no repetido puede ser $+$ o $-$. Entonces, nos interesa conocer el número de combinaciones distintas de $+$ y $-$ que podemos asignar a los $k$ sumandos no repetidos para un cierto $M_{S}>0$ dado, pues será un indicativo de a qué término $L-S$ corresponde. Para conocer ese número de combinaciones, simplemente aplicamos combinatoria: 
+En el lenguaje simple de particiones esto se traduce en que a cada sumando de la partición anterior podemos reducirlo en una cifra para obtener una partición de $M_{L}-1$, siempre y cuando esa reducción no implique repetir más de 2 veces un sumando. Esto dará lugar a varias particiones y tras varias reiteraciones, es posible que a la hora de seguir aplicando $L_{-}$ se obtenga una partición repetida. En ese caso, no la contamos 2 veces, simplemente la ignoramos. Así podremos generar todas las particiones de $M_{L}-1$ a partir de las particiones de $M_{L}$, y sistemáticamente llegar a $M_{L} = 0$. \par 
+Para cada uno de los $M_{L}$ tendremos que buscar los posibles $M_{S}$ correspondientes. En ese caso tendremos que generalizar lo que vimos para el caso de $M_{L}$ máximo. En estas particiones tendremos sumandos que se repiten y otros que no. De nuevo, para obtener $M_{S}$ solo nos interesa los términos no repetidos, puesto que los repetidos anulan la tercera de componente de spin entre sí. Asumamos que existen $k$ sumandos no repetidos y sabemos que el número de $M_{S}>0$ distintos será $\mathrm{floor}\qty(k/2) + 1$ porque cada sumando no repetido puede ser $+$ o $-$. Entonces, para una cierta partición $j$, nos interesa conocer el número de combinaciones distintas de $(+)$ y $(-)$ que podemos asignar a los $k$ sumandos no repetidos para un cierto $M_{S}>0$ dado, pues será un indicativo de a qué término $L-S$ corresponde. Para conocer ese número de combinaciones o degeneración, $G^{(j)}_{k}(M_{S})$, simplemente aplicamos combinatoria: 
 \begin{align}
-  G_{k}(M_{S}, \text{ partición}) = \binom{k}{k/2 - M_{S}} \text{ con } k/2 \geq M_{S} > 0 \label{degeneracion M_S}\\ 
-  \text{ Nótese: } G_{k}(M_{S}, \text{ partición}) = 0 \text{ para } M_{S} > k/2
+  G^{(j)}_{k}(M_{S}) &= \binom{k}{k/2 - M_{S}} \text{ con } k/2 \geq M_{S} > 0 \label{degeneracion M_S}\\ 
+  \text{ Por completitud: } G^{(j)}_{k}(M_{S}) &= 0 \text{ para } M_{S} > k/2
 \end{align}
-Que se puede entender de la siguiente forma: podemos centrarnos en los $-$ que debe haber para dar un cierto $M_{S}>0$, entonces, podemos pensar en este resultado como las distintas formas que hay de asignar los $-$ a los $k$ sumandos no repetidos. Debemos tener en cuenta que $0! = 1$ es decir que $G_{k}(k/2, \text{ partición } ) = 1$.\par 
-Así, para cada partición de $M_{L}$ podremos tener una o varias posibilidades de $M_{S}$. Y esto es esperable puesto que un cierto un cierto $M_{L}$ puede tener varios $L$ asociados, lo cual son distintos términos L-S y por tanto, cada cual puede tener un $M_{S}$ distinto. El conteo de particiones de $M_{L}$ con sus correspondientes degeneraciones $G_{k}(M_{S}, \text{ partición})$ nos ha de dar como mínimo la degeneración de los términos L-S obtenidos en las particiones de $M_{L}$ superior y posiblemente, un excedente que se corresponden con términos L-S nuevos de $L$ menor.\par 
+Que se puede entender de la siguiente forma: podemos centrarnos en los $(-)$ que debe haber para dar un cierto $M_{S}>0$, entonces, podemos pensar en este resultado como las distintas formas que hay de asignar los $(-)$ a los $k$ sumandos no repetidos. Debemos tener en cuenta que $0! = 1$ es decir que $G_{k}(k/2) = 1$.\par 
+Así, para cada partición de $M_{L}$ podremos tener una o varias posibilidades de $M_{S}$. Y esto es esperable, puesto que no solo un cierto $M_{L}$ puede tener varios $L$ asociados, los cuales pueden tener un $S$ distinto; sino que también podemos tener para un mismo $L$ con distintos $S$ asociados. El conteo de particiones de $M_{L}$ con sus correspondientes degeneraciones $G_{k}(M_{S})$ nos ha de dar como mínimo la degeneración total de los términos L-S obtenidos en las particiones de $M_{L}$ anterior y posiblemente, un excedente que se corresponden con términos L-S nuevos de $L$ menor.\par 
 Debe tenerse en cuenta que se pueden encontrar términos L-S nuevos repetidos. No es ningún error, es simplemente que hay varias configuraciones de los electrones que pueden dar el mismo término L-S. Estos términos los marcaremos como $K \times L^{S}$ donde $K$ es el número de veces que se ha encontrado ese término L-S. \par 
-Finalmente, el método se da por terminado cuando llegamos a $M_{L} = 0$. En ese caso, el número de términos L-S encontrados debe coincidir con el número de combinaciones \eqref{eq: numero de combinaciones final}, lo cual es una prueba de que el método se ha aplicado correctamente. \par
-
-El valor máximo de $L$, dado  $N$ y $l$ se puede 
-obtener teniendo en cuenta que un valor dado de 
- $m_{l}$ puede como máximo repetirse dos veces. 
- De este modo, 
- \begin{align}
-   L_\text{max} =\underbrace{2l}_{1} + \underbrace{2(l-1)}_{2}+\ldots+\underbrace{2\left(l-\text{floor}(\frac{N}{2})-1 \right)}_{\text{floor}\left(\frac{N}{2}\right) }+\left[l-\text{floor}\left(\frac{N}{2}\right)-1-1\right]\times \text{mod}(N,2)\\
-   L_\text{max} = 2l\times \text{floor}\left(\frac{N}{2}\right)-2\frac{\left(\text{floor}\left(\frac{N}{2}\right)+1\right)\left(\text{floor}\left(\frac{N}{2}\right)+2\right)}{2}+\left[l-\text{floor}\left(\frac{N}{2}\right)-2\right]\times \text{mod}(N,2)   
- \end{align}
+Merece la pena introducir el concepto paralelo de \textit{número de duplas iguales} $\mathcal{D}$, a las que nos referiremos simplemente como \textit{duplas}. Estas no son más que el número de parejas iguales en una cierta partición de $M_{L}$. Se encuentran relacionadas con el número de sumandos no repetidos $k$ de la siguiente forma: 
+\begin{align*}
+N = 2 \mathcal{D} + k 
+\end{align*}
+Donde $N$ es el número de electrones. En los ejemplos que comentemos en los puntos siguientes emplearemos las duplas para establecer \textbf{reglas} que faciliten la contabilidad y obtención de los términos L-S.\par
+Finalmente, el método se da por terminado cuando llegamos a $M_{L} = 0$. En ese caso, la degeneración total del número de términos L-S encontrados debe coincidir con el número de combinaciones \eqref{eq: numero de combinaciones final}, lo cual es una prueba de que el método se ha aplicado correctamente. \par
 
 
