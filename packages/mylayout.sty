@@ -30,6 +30,12 @@
     #2%
   \fi
 }
+\newcommand{\renderifnotemptynew}[2]{%
+  \if\relax\detokenize\expandafter{\#1}\relax
+  \else
+    #2%
+  \fi
+}
 %\newcommand{\renderifnotempty}[2]{
 % \ifx#1\@empty 
 % \else 
@@ -107,6 +113,7 @@
   academicyear/.store in=\@title@academicyear,
   projectname/.store in=\@title@projectname,
   projectsubname/.store in=\@title@projectsubname,
+  otherinfo/.store in=\@title@otherinfo,
 }
 
 %Default values for title keys
@@ -121,6 +128,7 @@
  academicyear={},
  projectname={},
  projectsubname={},
+ otherinfo={},
 } 
 
 \newcommand{\@rendertitle}{ 
@@ -147,7 +155,7 @@
     % =========================
     % AUTOR
     % =========================
-   \renderifnotempty{\@title@author}{
+   \renderifnotemptynew{\@title@author}{
     \begin{center}
       \large\@title@author
     \end{center}
@@ -207,7 +215,7 @@
        \hrule
        \vspace*{0.3cm}
        }
-       \renderifnotempty{\@title@author}{
+       \renderifnotemptynew{\@title@author}{
          {\Large \protect\byname \par\vspace*{0.3cm}}
       {\Large\@title@author}
        }
@@ -218,6 +226,12 @@
        }
        \renderifnotempty{\@title@academicyear}{
          {\large\textbf{\protect\academicyearname:} \@title@academicyear\par}
+       }
+       \renderifnotemptynew{\@title@otherinfo}{
+         \vfill
+         \hrule 
+         \vspace*{0.5em}
+      {\normalsize \@title@otherinfo}
        }
      \end{titlepage} 
     }

@@ -2,7 +2,7 @@
 \usepackage[spanish]{babel} 
 \usepackage{packages/mygeneral}
 \usepackage{packages/mycommands}
-\usepackage{packages/mylayout} 
+\usepackage{./packages/mylayout} 
 \institution{
   name=UAM
 } 
@@ -13,8 +13,21 @@
 \titlesetup{
   theme=project,
   title=Método optimizado de obtención de términos L-S y j-j para electrones degenerados,
-  author={Joan A. Mercado Tandazo $\quad$ Juan Manuel Sánchez Arrúa},
-  projectname=Física Atómica y Molecular
+  author={
+  \setlength{\tabcolsep}{1em} % Adjust column separation
+  \begin{tabular}{c c} 
+  Joan A. Mercado Tandazo & Juan Manuel Sánchez Arrúa \\ 
+  {\small (\href{mailto://joan.mercado.t@gmail.com}{joan.mercado.t@gmail.com}) } & {\small(\href{mailto://juanmanuelsa3006@gmail.com}{juanmanuelsa3006@gmail.com})}
+  \end{tabular} 
+},
+  projectname=Física Atómica y Molecular, 
+  otherinfo={
+   \begin{flushleft}
+     \textbf{Versión 1.0} -- \today \\
+     \textbf{Licencia:} Creative Commons Atribución 4.0 Internacional (CC BY 4.0). Se permite la reproducción, distribución, adaptación y reutilización de este material siempre que se reconozca adecuadamente la autoría.\\
+     \textbf{Repositorio y versión actualizada:} \url{https://github.com/Joan271/metodo-mejorado-atomica}
+   \end{flushleft}
+},
 } 
 \mathtoolsset{showonlyrefs=true} % for showing number only in labeled equations
 \allowdisplaybreaks[2] %in case you want your equations to be broken across pages
@@ -35,8 +48,7 @@
 \input{ejemplo4e.tex} 
 \section{Términos j-j}\label{sec: terminos j-j} 
 \input{Terminos j-j.tex} 
-\subsection{Ejemplo: 3 \texorpdfstring{$e^{-}$}{e^-}}
+\subsection{Ejemplo: configuración \texorpdfstring{$\ce{f^{3}}$}{f^3}}
 \input{j-j-3e.tex}
-\subsection{Ejemplo: 4 \texorpdfstring{$e^{-}$}{e^-}}
 \end{document} 
 

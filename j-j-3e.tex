@@ -1,5 +1,5 @@
 % !TEX root = main.tex
-Dada la configuración $f^{3}$ estudiemos los términos j-j que podemos obtener. En primer lugar, $j \in \qty{5/2, 7/2}$ y por tanto, las combinaciones de $j$ para los 3 electrones son el conjunto: 
+Dada la configuración $\ce{f^{3}}$ estudiemos los términos j-j que podemos obtener. En primer lugar, $j \in \qty{5/2, 7/2}$ y por tanto, las combinaciones de $j$ para los 3 electrones son el conjunto: 
 \begin{align*}
 \qty(j_{1}, j_{2}, j_{3}) \in \left\{\qty(5/2, 5/2, 5/2),\;  \qty(5/2, 5/2, 7/2),\;  \qty(5/2, 7/2, 7/2),\;  \qty(7/2, 7/2, 7/2)\right\}
 \end{align*}
@@ -11,47 +11,52 @@ g\qty(5/2, 7/2, 7/2) &= \binom{6}{1} \times  \binom{8}{2} = 168 &
 g\qty(7/2, 7/2, 7/2) &= \binom{8}{3} = 56
 \end{align*}
 Y, la degeneración total es: 364. Resultado equivalente a $\binom{14}{3}$ como era de esperar. \par 
-En este tipo de ejercicios, se suele preguntar por los términos j-j de la combinación de mayor degeneración. En este caso es la combinación $\qty(5/2, 7/2, 7/2)$. En esta combinación tenemos 2 electrones equivalentes con $j = 7/2$ y un electrón inequivalente con $j = 5/2$. Para tratarlo, primero acoplamos los electrones equivalentes, llamando $M_{J23}$ a la tercera componente de estos electrones acoplados. 
-\begin{align*}
- \begin{array}{c | c | c}
-   2M_{J23} & \text{ Particiones } & \text{ Términos }\\
-   \hline 
-   2M_{J23} = 12 & 12 = 7 + 5  & (7/2, 7/2)_{6} \\ 
-   \hline 
-    2M_{J23} = 10 & 10 = 7 + 3 & \text{ No hay nuevo término }\\ 
-    \hline 
-    2M_{J23} = 8 & \begin{aligned}
-     8 &= 7 + 1\\
-       &= 5 + 3
-   \end{aligned} & (7/2, 7/2)_{4} \\
-   \hline 
-    2M_{J23} = 6 & \begin{aligned}
-      6 &= 7 - 1\\
-        &= 5 + 1\\
-        \end{aligned} & \text{ No hay nuevo término }\\ 
-        \hline
-    2M_{J23} = 4 & \begin{aligned}
-      4 &= 7 - 3\\
-        &= 5 - 1\\
-        &= 3 + 1
-        \end{aligned}
-     & (7/2, 7/2)_{2} \\
-    \hline 
-    2M_{J23} = 2 & \begin{aligned}
-      2 &= 7 - 5\\ 
-        &= 5 - 3\\
-        &= 3 - 1\\ 
-        \end{aligned} & \text{ No hay nuevo término }\\
-        \hline 
-    2M_{J23} = 0 & \begin{aligned}
-      0 &= 7 - 7\\
-        &= 5 - 5\\
-        &= 3 - 3\\
-        &= 1 - 1
-    \end{aligned} & (7/2, 7/2)_{0}
-\end{array}
-    \end{align*}
-    Donde recordemos la notación: $(j_{2},j_{3})_{J_{23}}$ . A continuación, acoplamos el electrón inequivalente con $j = 5/2$. Para ello simplemente descoponemos: 
+En este tipo de ejercicios, se suele preguntar por los términos j-j de la combinación de mayor degeneración. En este caso es la combinación $\qty(5/2, 7/2, 7/2)$. En esta combinación tenemos 2 electrones equivalentes con $j = 7/2$ y un electrón inequivalente con $j = 5/2$. Para tratarlo, primero acoplamos los electrones equivalentes (Fig. \ref{fig: calculo de los terminos j-j de los 2 electrones equivalentes con j = 7/2}), llamando $M_{J23}$ a la tercera componente de estos electrones acoplados.  También hacemos uso de la notación: $(j_{2},j_{3})_{J_{23}}$.
+\begin{figure}[H] 
+  \begin{center}
+  \begin{align*}
+   \begin{array}{c | c | c}
+     2M_{J23} & \text{ Particiones } & \text{ Términos }\\
+     \hline 
+     2M_{J23} = 12 & 12 = 7 + 5  & (7/2, 7/2)_{6} \\ 
+     \hline 
+      2M_{J23} = 10 & 10 = 7 + 3 & \text{ No hay nuevo término }\\ 
+      \hline 
+      2M_{J23} = 8 & \begin{aligned}
+       8 &= 7 + 1\\
+         &= 5 + 3
+     \end{aligned} & (7/2, 7/2)_{4} \\
+     \hline 
+      2M_{J23} = 6 & \begin{aligned}
+        6 &= 7 - 1\\
+          &= 5 + 1\\
+          \end{aligned} & \text{ No hay nuevo término }\\ 
+          \hline
+      2M_{J23} = 4 & \begin{aligned}
+        4 &= 7 - 3\\
+          &= 5 - 1\\
+          &= 3 + 1
+          \end{aligned}
+       & (7/2, 7/2)_{2} \\
+      \hline 
+      2M_{J23} = 2 & \begin{aligned}
+        2 &= 7 - 5\\ 
+          &= 5 - 3\\
+          &= 3 - 1\\ 
+          \end{aligned} & \text{ No hay nuevo término }\\
+          \hline 
+      2M_{J23} = 0 & \begin{aligned}
+        0 &= 7 - 7\\
+          &= 5 - 5\\
+          &= 3 - 3\\
+          &= 1 - 1
+      \end{aligned} & (7/2, 7/2)_{0}
+   \end{array}
+  \end{align*}
+  \end{center}
+  \caption{Cálculo de los términos j-j de los 2 electrones equivalentes con $j = 7/2$.}\label{fig: calculo de los terminos j-j de los 2 electrones equivalentes con j = 7/2}
+\end{figure}
+    A continuación, acoplamos el electrón inequivalente con $j = 5/2$. Para ello simplemente descomponemos: 
     \begin{align*}
       J &= J_{23} \otimes j_{1} \implies \begin{cases}
         J = 6 \otimes 7/2 = 19/2 \oplus 17/2 \oplus 15/2 \oplus 13/2 \oplus 11/2 \oplus 9/2\\
@@ -71,26 +76,30 @@ En este tipo de ejercicios, se suele preguntar por los términos j-j de la combi
       \boxed{
       (5/2, 7/2, 7/2)_\qty{19/2,\; 17/2,\;  2 \times 15/2,\;  2 \times 13/2,\;  2 \times 11/2, \; 3 \times 9/2,\;  3 \times 7/2,\;  2 \times 5/2,\;  3/2,\;  1/2}}
     \end{align*}
+  \hline 
     \textbf{Nota:} En este caso, para calcular los términos j-j de los 2 $e^{-}$ es más sencillo estudiar la paridad de intercambio de los coeficientes de Clebsch-Gordan que acoplan $j_{2}$ y $j_{3}$ a $J_{23}$. Esta paridad viene dada por: 
     \begin{align*}
       P_{23} = (-1)^{J_{23} - j_{2} - j_{3}} = (-1)^{J_{23} - 1}
     \end{align*}
-  Como $0 \leq J_{23} \leq 7$ entonces, simplemente podemos evaluar la anterior paridad para cada $J_{23}$ posible y descartar los términos pares que no cumplen la condición de antisimetría de los fermiones. Es directo darse cuenta que dichos términos son aquellos con $J_{23}$ par. Este método es más directo y nos permite comprobar nuestro resultado, pero es solo aplicable para el caso de 2 $e^{-}$ equivalentes. \par 
+  Como $0 \leq J_{23} \leq 7$ entonces, simplemente podemos evaluar la anterior paridad para cada $J_{23}$ posible y descartar los términos pares que no cumplen la condición de antisimetría de los fermiones. Es directo darse cuenta de que dichos términos son aquellos con $J_{23}$ par. Este método es más directo y nos permite comprobar nuestro resultado, pero es solo aplicable para el caso de 2 $e^{-}$ equivalentes. 
+  \vspace*{1em} 
+  \hline
   La degeneración acumulada de este término es: 
 \begin{align*}
   g_{T} &= 20 + 18 + 16 + 2 \times 14 + 2 \times 12 + 3 \times 10 + 3 \times 8 + 2 \times 6 + 4 = 168
 \end{align*}    
 Que es el resultado esperado.\par 
-Por otro lado, por completitud estudiemos el caso de la combinación  hola $(7/2, 7/2, 7/2)$ donde tenemos 3 electrones equivalentes. Procedemos de la misma forma (véase el cálculo adjunto) y validamos el resultado con la degeneración acumulada: 
+Por último, por completitud estudiemos el caso de la combinación $(7/2, 7/2, 7/2)$ donde tenemos 3 $e^{-}$ equivalentes. Procedemos de la misma forma (Fig. \ref{fig: calculo de los terminos j-j de los 3 electrones equivalentes con j = 7/2}) y validamos el resultado con la degeneración acumulada: 
     \begin{align*}
     g_{T} = 16 + 12 + 10 + 8 + 6 + 4 = 56
     \end{align*}
- Que corresponde con la esperada. Así que finalmente los términos j-j de esta combinación: 
+ Que corresponde con la esperada. Así que los términos j-j de esta combinación son: 
  \begin{align*}
    \boxed{
    (7/2, 7/2, 7/2)_\qty{15/2,\; 11/2,\;  9/2,\;  7/2,\;  5/2, \; 3/2,\;  3 \times 7/2,\; 5/2,\;  3/2}}
  \end{align*}
-
+\begin{figure}[H] 
+  \begin{center}
 \begin{align*}
  \begin{array}{c | c | c}
    2M_{J} & \text{ Particiones } & \text{ Términos }\\
@@ -146,5 +155,7 @@ Por otro lado, por completitud estudiemos el caso de la combinación  hola $(7/2
         \hline 
 \end{array}
     \end{align*}
-\begin{minipage}{0.37\textwidth} 
- \end{minipage} 
+  \end{center}
+  \caption{Cálculo de términos j-j de la combinación $(7/2,7/2,7/2)$}\label{fig: calculo de los terminos j-j de los 3 electrones equivalentes con j = 7/2}
+\end{figure}
+

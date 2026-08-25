@@ -2,13 +2,13 @@
 El acoplamiento j-j se centra en acoplar los momentos angulares individuales $j_{i}$ de cada electrón, en lugar de los momentos orbitales $l_{i}$ y spins $s_{i}$ por separado como los términos L-S. De cara a las ventajas de procedimiento que presentamos en este trabajo, seguiremos teniendo particiones, pero estas serán de $M_{J}$. No obstante, las reglas dadas por el principio de exclusión sobre las particiones serán, en comparación, más estrictas. Pues en este caso: 
 \begin{center}
 \fbox{
-\begin{minipage}[t]{0.8\textwidth}
+\begin{minipage}[t]{0.9\textwidth}
   \centering
- Dada una partición de $M_{J}$, entonces, en ella no podemos ningún sumando 
+ Dada una partición de $M_{J}$, entonces, en ella no podemos repetir ningún sumando 
 \end{minipage} 
 } 
 \end{center} 
-Un apunte a tener en cuenta es que, partiendo de una cierta configuración de electrones con el mismo momento angular orbital $l$, en el momento en el que acoplamos el spin, estos electrones pueden tener $j = l + \frac{1}{2}$ o $j = l - \frac{1}{2}$. Por tanto, solo para las combinaciones donde los electrones tengan el mismo $j$, se ha de considerar el principio de exclusión. De lo contrario, los electrones son inequivalentes. Por tanto, lo primero es plantear las posibles combinaciones de $j$ de los electrones y, para aquella que sea de nuestro interés, aplicar el procedimiento de acoplamiento. \par 
+Un apunte a tener en cuenta es que, partiendo de una cierta configuración de electrones con el mismo momento angular orbital $l$, en el momento en el que acoplamos el spin, estos electrones pueden tener $j = l + \frac{1}{2}$ o $j = l - \frac{1}{2}$. Por tanto, solo para las combinaciones donde los electrones tengan el mismo $j$, se ha de considerar el principio de exclusión. De lo contrario, los electrones son inequivalentes. En consecuencia, lo primero es plantear las posibles combinaciones de $j$ de los electrones y, para aquella que sea de nuestro interés, aplicar el procedimiento de acoplamiento. \par 
 Veamos un ejemplo general. Partamos de una configuración $l^{N}$ con $N < 1/2 (2l+1)\times(2s+1)$. Acoplando spin y momento angular orbital de cada electrón, los valores que toma $j$ son $j \in \qty{j_{-}, j_{+}} = \qty{l - 1/2, l + 1/2}$ y, por tanto, las posibles combinaciones de $j$  para los $N$ electrones son: 
 \begin{align*}
 \qty(j_{1}, j_{2}, \dots, j_{N}) \in \left\{\qty(j_{-}, j_{-}, \dots, j_{-}), \qty(j_{-}, j_{-}, \dots, j_{+}), \dots\right.\\ 
@@ -22,8 +22,8 @@ En cambio, para una tupla con $k$ elementos $j_{+}$ y $N-k$ elementos $j_{-}$, l
 \begin{align*}
 g(\underbrace{j_{-}, j_{-}, \dots, j_{-}}_{N-k}, \underbrace{j_{+}, j_{+}, \dots, j_{+}}_{k}) = \binom{2j_{-}+1}{N-k} \times \binom{2j_{+}+1}{k}
 \end{align*}
-Y entonces la degeneración acumulada de \eqref{eq: numero de combinaciones final} se verifica (véase \href{https://en.wikipedia.org/wiki/Vandermonde%27s_identity}{identidad de Vandermonde}): 
+Y entonces, la degeneración acumulada de \eqref{eq: numero de combinaciones final} se verifica (véase \href{https://en.wikipedia.org/wiki/Vandermonde%27s_identity}{identidad de Vandermonde}): 
 \begin{align*}
 \sum_{k=0}^{N} g(\underbrace{j_{-}, j_{-}, \dots, j_{-}}_{N-k}, \underbrace{j_{+}, j_{+}, \dots, j_{+}}_{k}) = \sum_{k=0}^{N} \binom{2j_{-}+1}{N-k} \times \binom{2j_{+}+1}{k} = \binom{2(2l+1)}{N}
 \end{align*}
-Con estas consideraciones, el procedimiento para obtener los términos j-j es análogo que para el caso Russell--Saunders. Veámoslo con los siguientes ejemplos:
+Con estas consideraciones, el procedimiento para obtener los términos j-j es análogo que para el caso Russell--Saunders. Veámoslo con el siguiente ejemplo.

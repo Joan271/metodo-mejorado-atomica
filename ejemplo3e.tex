@@ -1,6 +1,6 @@
 % !TEX root = main.tex
 \renewcommand{\arraystretch}{1.5}
-Consideremos ahora el caso de 3 $e^{-}$ degenerados con $l=2$. La correspondiente configuración electrónica es $\ce{d^{3}}$. Ahora tendremos que considerar triadas del tipo $\qty(m_{1}^{\sigma_{1}}, m_{2}^{\sigma_{2}},m_{3}^{\sigma_{3}})$. En cuanto al número de duplas que se pueden formar, es fácil observar que se pueden formar $\mathcal{D} \in  \qty{0,1}$ duplas, que se corresponden con $k \in \qty{3,1}$ sumandos no repetidos. Entonces, mediante la degeneración $G_{k}$ por partición podemos establecer las siguientes reglas:\par
+Consideremos ahora el caso de 3 $e^{-}$ degenerados con $l=2$. La correspondiente configuración electrónica es $\ce{d^{3}}$. Ahora tendremos que considerar tuplas del tipo $\qty(m_{1}^{\sigma_{1}}, m_{2}^{\sigma_{2}},m_{3}^{\sigma_{3}})$. Podremos entonces formar $\mathcal{D} \in  \qty{0,1}$ duplas, que se corresponden con $k \in \qty{3,1}$ sumandos no repetidos. Entonces, mediante la degeneración $G_{k}$ por partición podemos establecer las siguientes reglas:\par
 \underline{\bfseries Reglas}:
 \begin{align*}
   \mathcal{D}&=1 \iff k=1 \implies 1 \times \qty(M_{S} = 1/2)\\ 
@@ -10,8 +10,22 @@ Consideremos ahora el caso de 3 $e^{-}$ degenerados con $l=2$. La correspondient
     3 \times \qty(M_{S} = 1/2): & \text{permutaciones de } \qty(+, +, -)
   \end{dcases} 
 \end{align*}
-Con estas reglas procedemos a desarrollar el proceso reiterativo (veáse el cálculo adjunto), primero buscando el $M_{L}$ máximo que resulta en $5$. Como el número de electrones es impar, $M_{S} = 1/2$ para este término, resultado en $\ce{^{2}H}(22)$. A continuación, aplicamos $L_{-}$, i.e., reducimos en una cifra uno de los sumandos de la anterior partición respetando el principio de exclusión. De ahí obtenemos 2 particiones, ambas con $\mathcal{D} = 1$, $k=1$, lo cual nos lleva inmediatamente a $M_{S} = 1/2$  en ambas. Deducimos entonces la presencia de dos términos, uno con $L = 5$ (el anterior término L-S) y otro con $L = 4$, resultando en $\ce{^{2}G}(18)$. Nótese como los términos ya obtenidos, los contabilizamos y tachamos para indicar que no son nuevos. A continuación, volvemos a reiterar el método. Para $M_{L} = 3$ nos encontramos con una partición con $\mathcal{D} = 0$, $k=3$, donde justamente las ventajas de este método salen a brillar. Con las reglas que hemos establecido gracias a la combinatoria presentada, deducimos en esta partición tenemos un término con $M_{S} = 3/2$ y tres términos con $M_{S} = 1/2$. El término con $M_{S} = 3/2$ es un término L-S nuevo, el cual corresponde a $\ce{^{4}F}(28)$. En cuanto a los términos con $M_{S} = 1/2$, podemos ver que tenemos contabilizados los dos anteriores, pero además, el nuevo que hemos obtenido con $S = 3/2$ también tiene que ser contado aquí, pues su tercera componente puede tomar valores tanto de $M_{S= 3/2}$ como de $M_{S} = 1/2$. Este es un detalle general importante a tener en cuenta en todo el método y que garantiza que la contabilidad no se desajuste. Nótese que también encontramos un término $\ce{^{2}F}(14)$.\par 
-En las reiteraciones siguientes, hemos omitido escribir todos los términos ya presentes, centrándonos solo en los nuevos. Simplemente aplicando la regla a cada una de las particiones y sumando todos los casos de $M_{S}=3/2$ y $M_{S} = 1/2$ que se vayan obteniendo, podemos inducir, si surgen nuevos términos de menor $L$ o no. Por ejemplo, para $M_{L} = 3$ obtuvimos $1 \times (M_{S} = 3/2)$ y $4 \times (M_{S} = 1/2)$, mientras que para $M_{L} = 2$  se ha obtenido $1 \times (M_{S} = 3/2)$ y $6 \times (M_{S} = 1/2)$. Esto nos lleva a deducir que para $M_{L} = 2$ aparecen dos términos nuevos con $S = 1/2$, es decir, $2 \times \ce{^{2}D}(10)$. Con la misma metodología, llegamos a que para $M_{L} =1$, que tiene $2 \times (M_{S} = 3/2)$  y $8 \times (M_{S} = 1/2)$, debe haber un término con $S = 3/2$, $\ce{^{4}P}(12)$, y un término nuevo con $S = 1/2$, i.e. $\ce{^{2}P}(6)$, (nótese cómo de nuevo que el término con $S = 3/2$ también se contabiliza en el caso de $M_{S} = 1/2$). Finalmente, para $M_{L} = 0$, no aparecen términos nuevos. 
+Con estas reglas procedemos a desarrollar el proceso reiterativo (véase el cálculo de Fig. \ref{fig:ejemplo3e}). Primero hallamos $M_{L}^\text{(max)} = 5$. A continuación, como el número de electrones es impar, $M_{S} = 1/2$ para este término, resultado en $\ce{^{2}H}(22)$. Proseguimos aplicando $L_{-}$, i.e. reducimos en una cifra uno de los sumandos de la anterior partición respetando el principio de exclusión. De ahí obtenemos 2 particiones, ambas con $\mathcal{D} = 1$, $k=1$, lo cual nos lleva inmediatamente a $M_{S} = 1/2$  en ambas. Deducimos entonces la presencia de dos términos, uno con $L = 5$ (el anterior término L-S) y otro con $L = 4$, resultando en $\ce{^{2}G}(18)$.\par 
+Seguimos volviendo a reiterar el método. Para $M_{L} = 3$ nos encontramos con una partición con $\mathcal{D} = 0$, $k=3$, llegando a una tesitura similar al del anterior ejemplo y donde justamente las ventajas de este método salen a brillar. Con las reglas que hemos establecido gracias a la combinatoria presentada, deducimos en esta partición tenemos un término con $M_{S} = 3/2$ y tres términos con $M_{S} = 1/2$. El término con $M_{S} = 3/2$ es un término L-S nuevo, el cual corresponde a $\ce{^{4}F}(28)$. En cuanto a los términos con $M_{S} = 1/2$, podemos ver que tenemos contabilizados los dos anteriores, pero además, el nuevo que hemos obtenido con $S = 3/2$ también tiene que ser contado aquí, pues su tercera componente puede tomar valores tanto de $M_{S} = 3/2$ como de $M_{S} = 1/2$. Este es un detalle general importante a tener en cuenta en todo el método y que garantiza que la contabilidad no se desajuste. Nótese que también encontramos un término $\ce{^{2}F}(14)$.\par 
+En las reiteraciones siguientes, hemos omitido escribir todos los términos ya presentes, centrándonos solo en los nuevos. Simplemente aplicando la regla a cada una de las particiones y sumando todos los casos de $M_{S}=3/2$ y $M_{S} = 1/2$ que se vayan obteniendo, podemos inducir, si surgen nuevos términos de menor $L$ o no. Por ejemplo, para $M_{L} = 3$ obtuvimos $1 \times (M_{S} = 3/2)$ y $4 \times (M_{S} = 1/2)$, mientras que para $M_{L} = 2$  se ha obtenido $1 \times (M_{S} = 3/2)$ y $6 \times (M_{S} = 1/2)$. Esto nos lleva a deducir que para $M_{L} = 2$ aparecen dos términos nuevos con $S = 1/2$, es decir, $2 \times \ce{^{2}D}(10)$. Con la misma metodología, llegamos a que para $M_{L} =1$, que tiene $2 \times (M_{S} = 3/2)$  y $8 \times (M_{S} = 1/2)$, debe haber un término con $S = 3/2$, $\ce{^{4}P}(12)$, y un término nuevo con $S = 1/2$, i.e. $\ce{^{2}P}(6)$, (nótese cómo, de nuevo, el término con $S = 3/2$ también se contabiliza en el caso de $M_{S} = 1/2$). Finalmente, para $M_{L} = 0$, no aparecen términos nuevos. En el ejemplo siguiente, iremos un paso más allá y veremos como tratar la repetición de términos espectrales de una forma vectorizada. 
+
+
+La prueba de degeneración acumulada $g_{T}$ nos garantiza que los términos obtenidos son correctos: 
+\begin{align*}
+  g_{T} &= 22 + 18 + 28 + 14 + 2 \times 10 + 12 + 6 = 210 = \binom{2 \times 5}{3} & &\boxed{\checkmark}
+\end{align*}
+Por tanto, los términos espectrales (T.E.) son: 
+\begin{align*}
+  \boxed{\text{ T.E.:} \quad \ce{^{4}F}(28), \quad \ce{^{2}H}(22), \quad \ce{^{2}G}(18), \quad \ce{^{2}F}(14), \quad 2 \times \ce{^{2}D}(10), \quad \ce{^{4}P}(12), \quad \ce{^{2}P}(6)}
+\end{align*}
+
+\begin{figure}[H] 
+  \begin{center}
 \begin{align*}
  \begin{array}{c | c | c | c}
    M_{L} & \text{ Particiones } & \text{ Duplas } & \text{ Términos }\\
@@ -81,13 +95,9 @@ En las reiteraciones siguientes, hemos omitido escribir todos los términos ya p
     \end{cases} \implies  \text{ Ningún término L-S nuevo }\\
  \end{array}
 \end{align*}
-La prueba de degeneración acumulada $g_{T}$ nos garantiza que los términos obtenidos son correctos: 
-\begin{align*}
-  g_{T} &= 22 + 18 + 28 + 14 + 2 \times 10 + 12 + 6 = 210 = \binom{2 \times 5}{3} & &\boxed{\checkmark}
-\end{align*}
-Por tanto, los términos espectrales (T.E.) son: 
-\begin{align*}
-  \boxed{\text{ T.E.:} \quad \ce{^{4}F}(28), \quad \ce{^{2}H}(22), \quad \ce{^{2}G}(18), \quad \ce{^{2}F}(14), \quad 2 \times \ce{^{2}D}(10), \quad \ce{^{4}P}(12), \quad \ce{^{2}P}(6)}
-\end{align*}
+  \end{center}
+  \caption{Desarrollo del método para el ejemplo de acoplamiento L-S en $\ce{d^{3}}$ }\label{fig:ejemplo3e}
+\end{figure}
+
 
 
