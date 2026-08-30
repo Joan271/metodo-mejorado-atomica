@@ -8,4 +8,12 @@ authors:
 title: "Método optimizado de obtención de términos L-S y j-j para electrones degenerados"
 version: 1.0
 url: "https://github.com/Joan271/metodo-mejorado-atomica"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Mercado Tandazo"
+    given-names: "Joan A."
+  - family-names: "Sánchez Arrúa"
+    given-names: "Juan Manuel"
+  title: "Método optimizado de obtención de términos L-S y j-j para electrones degenerados"
 

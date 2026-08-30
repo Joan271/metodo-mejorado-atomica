@@ -30,7 +30,7 @@ Los archivos fuente necesarios para compilar el documento están incluidos en el
 ## Estructura del repositorio
 
 * `main.tex`: archivo principal del documento.
-* `packages/`: paquetes auxiliares propios que se pueden encontrar en: [https://github.com/Joan271/Programas_utiles].
+* `packages/`: paquetes auxiliares propios que se pueden encontrar en: [[https://github.com/Joan271/Programas_utiles]].
 *  El resto de archivos `.tex` son el contenido llamado por `main.tex`.
 
 ## Versiones
@@ -55,11 +55,11 @@ Para consultar el texto completo de la licencia del código, véase el archivo [
 
 Más información sobre la licencia Creative Commons:
 
-[https://creativecommons.org/licenses/by/4.0/deed.es]
+[[https://creativecommons.org/licenses/by/4.0/deed.es]]
 
-## Cómo citar
+## Citaciones
 
 Si utilizas este material en un trabajo académico, se recomienda citar a sus autores y especificar la versión utilizada.
 
 ## Contacto
-Para cualquier comentario, corrección o sugerencia, puede utilizarse la información de contacto indicada en el documento o abrir una *issue* en este repositorio.
+Para cualquier comentario, corrección o sugerencia, puede utilizarse la información de contacto indicada en el documento, abrir una *issue* en este repositorio o emplear la sección de discusiones.
