@@ -1,3 +1,5 @@
+% !TEX root = main.tex
+
 \renewcommand{\arraystretch}{1.5}
 Consideramos el caso de 2 $e^-$ con  $l=1$. Las posibles 
 configuraciones electrónicas serán aquellas que 
@@ -29,29 +31,30 @@ cada $\mathcal{D}$ son:\par
     \end{cases}
 \end{align*}
 Es quizás importante remarcar, en el caso de $\mathcal{D}=1$, 
-que las configuraciones $(+,-)$ y $(-,+)$ son equivalentes 
+que las configuraciones $(+,-)$ y $(-,+)$ no son distintas 
 y sólo se cuenta una de ellas. Esto es porque en este
 caso  $m_{l}^{(1)}=m_{l}^{(2)}$, y como el resto de 
-números cuánticos también son iguales, siendo los 
-$e^-$ partículas indistinguibles, el estado realmente 
-de esta configuración es 
+números cuánticos también son iguales, los 
+$e^-$ son equivalentes, y el estado 
+de esta configuración debe ser la combinación antisimétrica de las configuraciones mencionadas 
  \begin{align}
   \ket{\psi} = \frac{1}{\sqrt{2}}\left(\ket{n,n;l,l;m_{l},m_{l};+,-}-\ket{n,n;l,l;m_{l},m_{l};-,+} \right) 
 \end{align}
-donde estamos empleando la siguiente notación para 
+es decir ambas configuraciones refieren al mismo estado. 
+Estamos empleando la siguiente notación para 
 especificar una configuración 
 \begin{align*}
   \ket{\psi} = \ket{n_{1},n_{2};l_{1},l_{2};m_{l}^{(1)},m_{l}^{(2)};m_{s}^{(1)},m_{s}^{(2)}}
 \end{align*}
 Mientras que en el caso $\mathcal{D}=0$, al tener $m_{l}$ distintos, 
-los dos electrones son distinguibles, y por lo tanto 
+los dos electrones son inequivalentes, y por lo tanto 
 cuando $M_{S}=0$ tenemos dos posibles estados diferentes 
 \begin{align*}
-  \ket{\psi_{1}} &= \ket{n,n;l,l;m_{l},m_{l}';+,-}\\
-  \ket{\psi_{2}} &= \ket{n,n;l,l;m_{l},m_{l}';-,+}\\
+  \ket{\psi_{1}} &= \frac{1}{\sqrt{2}}\left(\ket{n,n;l,l;m_{l},m_{l}';+,-}-\ket{n,n;l,l;m_{l}',m_{l};-,+}\right)\\
+ \ket{\psi_{2}} &= \frac{1}{\sqrt{2}}\left(\ket{n,n;l,l;m_{l},m_{l}';-,+}-\ket{n,n;l,l;m_{l}',m_{l};+,-}\right)\\
   \ket{\psi_{1}}&\ne \ket{\psi_{2}}
 \end{align*}
-Habiendo establecido las reglas, procedemos a obtener los términos según el valor de $M_{L}$:
+Establecidas las reglas, procedemos a obtener los términos según el valor de $M_{L}$:
 \begin{align*}
  \begin{array}{c | c | c | c}
   M_{L} & \text{ Particiones } & \text{ Duplas } & \text{ Términos }\\
@@ -81,13 +84,11 @@ de restar $1$ a los diferentes $m_{l}$ que aparecen
 en la configuración de $M_{L}^{(\text{max})}$.\par 
 Por otro lado, al disminuir $M_{L}$ y contar los 
 estados, tenemos que considerar que para una 
-configuración con $L$ y  $S$ dados, también van a 
+configuración L-S dada, también van a 
 existir instancias con  $M_{L}$ y $M_{S}$ menores, 
 por lo que en cada $M_{L}$ debemos de asegurarnos 
-de no perder estos estados y contarlos como 
-configuraciones nuevas o distintas.\par 
-
-Específicamente a tener en cuenta en la tabla anterior es que, en cada $M_{L}$ hemos contabilizado y posteriormente tachado los términos que ya han surgido en $M_{L}$ mayores, y que, por lo tanto, no son nuevos. Como veremos también en los siguientes ejemplos, hemos tenido el siguiente comportamiento: sean dos términos espectrales, uno con $S = S_{1}$ y otro con $S = S_{2}$ con $S_{1} > S_{2}$, el término con $S = S_{1}$ va a aparecer tanto en la contabilidad de $M_{S} = S_{1}$ como en la contabilidad de $M_{S} = S_{2}$. Este es el caso, en este ejemplo, de $\ce{^{3}P}(9)$, que aparece tanto en la contabilidad de $M_{S} = 1$ como en la contabilidad de $M_{S} = 0$ donde también se encuentra el término $\ce{^{1}D}(5)$, para $M_{L} = 1$.\par
+de no perder estos estados ni contarlos como 
+configuraciones nuevas o distintas. Específicamente a tener en cuenta en la tabla anterior es que, en cada $M_{L}$ hemos contabilizado y posteriormente tachado los términos que ya han surgido en $M_{L}$ mayores, y que, por lo tanto, no son nuevos.\par
 
 Para $M_{L}<0$ las configuraciones serán 
 idénticas, simplemente cambiando el signo de las $m_{l}$. 
